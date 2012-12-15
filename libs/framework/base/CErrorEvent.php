@@ -1,3 +1,4 @@
+
 <?php
 /**
  * CErrorEvent class file.

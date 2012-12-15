@@ -1,6 +1,7 @@
 <?php
 //include the core configure file
 require_once (dirname(dirname(__FILE__)) . "/conf/core.php");
+require_once (dirname(dirname(__FILE__)) . "/conf/env.php");
 
 //include web configure file
 require_once dirname(__FILE__) .DS."protected".DS."config".DS."webconf.php" ;
@@ -13,5 +14,5 @@ require_once (USERLIB_PATH . "functions.php");
 
 //set alias for some usefull path when needed
 //Yii::setPathOfAlias($alias, $path) ;
-
-Yii::createWebApplication($environment->getConfig())->run();
+$env = new Env() ;
+Yii::createWebApplication($env->getConfig())->run();
